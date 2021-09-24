@@ -1,65 +1,48 @@
-USE humanResources_db;
+USE humanResources_DB;
 
 INSERT INTO department (name) VALUES
-('Executive'),
+('Leadership'),
 ('Sales'),
-('Production');
+('Associate');
 
 
 INSERT INTO roles (title,salary,department_id) VALUES
--- Executive
-('President', 2500000.00,1),
-('Cheif Executive Officer',300000,1),
-('Cheif Financial Officer',250000,1),
-('General Manager',200000,1),
+-- Managers
+('Store Manager', 100000.00,1),
+('Assistant Manager',80000.00,1),
+('Manager',65000.00,1),
+('Sales Manager',80000.00,1),
 
 -- Sales
-('Sales Manager',80000,2),
-('Sales Representative',65000,2),
+('Sales Representative',65000.00,2),
 
--- Production
-('Director of Operations',150000,3),
-('Director of Production',85000,3),
-('Team Leader',65000,3),
-('Project Manager',35000,3);
+-- Associates
+('Cashier',20000.00,3),
+('Product Knowledge Expert',25000.00,3),
+('Stock Associate',20000.00,3),
+('Associate',19000.00,3);
 
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES
--- Executive
-  --President
+INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
   ('Jason', 'Gibson', 1,null),
-  --CEO
   ('Tony', 'Woods', 2,1),
-  --CFO
   ('Jeremy', 'Hoffman', 3,2),
-  --GM
   ('Shelia', 'Anderson', 4,2), 
-
-  
---Sales
-  --Sales Manager
   ('Rory', 'Walsh', 5,4),
-  ('Mel', 'Finn', 6,5),
-  ('Tom', 'Furke', 6,5),
-
---Production
-  --DirOp
-  ('Tina', 'Pavlo',7,4),
-  --DirProd   
-  ('John', 'Rivers',8,4),
-  --TL
-  ('Mary', 'Jones',9,8),
-  ('Sharon', 'Chatlos',9,8),
-  ('Dave', 'Smith',9,8),
-  --PM
-  ('Kevin', 'Pratt',10,9),
-  ('Sue', 'Lanes',10,9),
-  ('Mary-Beth', 'Carlson',10,9),
-  ('Shannon', 'Heavinly',10,9),
-  ('Nick', 'Martin',10,9),
-  ('Jackie', 'Bush',10,9),
-  ('Randy', 'Kreilis',10,9),
-  ('Jennifer', 'Corless',10,9),
-  ('Molly', 'Hall',10,9),
-  ('Tim', 'Sawyer',10,9);
+  ('Mel', 'Finn', 5,4),
+  ('Tom', 'Furke', 5,4),
+  ('Tina', 'Pavlo',6,3),
+  ('John', 'Rivers',7,3),
+  ('Mary', 'Jones',8,3),
+  ('Sharon', 'Chatlos',8,3),
+  ('Dave', 'Smith',8,3),
+  ('Kevin', 'Pratt',9,3),
+  ('Sue', 'Lanes',9,3),
+  ('Mary-Beth', 'Carlson',9,3),
+  ('Shannon', 'Heavinly',9,3),
+  ('Nick', 'Martin',9,3),
+  ('Jackie', 'Bush',9,3),
+  ('Randy', 'Kreilis',9,3),
+  ('Jennifer', 'Corless',9,3),
+  ('Molly', 'Hall',9,3),
+  ('Tim', 'Sawyer',9,3);
